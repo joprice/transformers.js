@@ -410,6 +410,8 @@ export class TokenClassificationPipeline extends (/** @type {new (options: TextP
             const ids = model_inputs.input_ids[i];
             const batch = logits[i];
 
+            let currentPos = 0;
+
             // List of tokens that aren't ignored
             const tokens = [];
             for (let j = 0; j < batch.dims[0]; ++j) {
@@ -431,16 +433,16 @@ export class TokenClassificationPipeline extends (/** @type {new (options: TextP
 
                 const scores = softmax(tokenData.data);
 
+                //console.log("adding len for word", word)
                 tokens.push({
                     entity: entity,
                     score: scores[topScoreIndex],
                     index: j,
                     word: word,
-
-                    // TODO: Add support for start and end
-                    // start: null,
-                    // end: null,
+                    start: currentPos,
+                    end: currentPos + word.length,
                 });
+                currentPos += word.length;
             }
             toReturn.push(tokens);
         }
