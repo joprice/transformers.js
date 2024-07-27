@@ -1,5 +1,6 @@
 
 import json
+import sys
 import os
 import shutil
 from dataclasses import dataclass, field
@@ -566,6 +567,8 @@ def main():
     # Step 1. convert huggingface model to onnx
     if not conv_args.split_modalities:
         main_export(**export_kwargs)
+        #print(tokenizer.pre_tokenizer)
+        sys.exit(1)
     else:
         custom_export_kwargs = dict(
             output_dir=output_model_folder,
