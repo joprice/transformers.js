@@ -9,14 +9,11 @@ packages = [{include = "convert.py"}]
 python = "^3.11"
 # tokenizers 19 introduced breaking changes
 tokenizers = "<0.19.0"
+# this is the version before the update to tokenizers 0.19
 transformers = {version = "<4.40", extras = ["torch"]}
-#transformers = {version = "4.38.2", extras = ["torch"]}
 onnxruntime = "1.18.1"
-#onnxruntime = "1.17.1"
-#optimum = "1.21.2"
 optimum = "1.21.2"
 onnx = "1.16.1"
-#onnx = "1.15.0"
 onnxconverter-common = "1.14.0"
 tqdm = "^4.66.4"
 onnxslim = "0.1.31"
