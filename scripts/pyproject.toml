@@ -3,7 +3,6 @@ name = "transformers-scripts"
 version = "0.1.0"
 description = ""
 authors = []
-readme = "README.md"
 packages = [{include = "convert"}]
 
 [tool.poetry.dependencies]
