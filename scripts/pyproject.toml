@@ -3,11 +3,13 @@ name = "transformers-scripts"
 version = "0.1.0"
 description = ""
 authors = []
-packages = [{include = "convert"}]
+packages = [{include = "convert.py"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
 
+[tool.poetry.scripts]
+transformers-js = "convert:main"
 
 [build-system]
 requires = ["poetry-core"]
