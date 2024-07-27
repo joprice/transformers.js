@@ -1121,13 +1121,13 @@ sympy = "*"
 
 [[package]]
 name = "optimum"
-version = "1.21.0"
+version = "1.21.2"
 description = "Optimum Library is an extension of the Hugging Face Transformers library, providing a framework to integrate third-party libraries from Hardware Partners and interface with their specific functionality."
 optional = false
 python-versions = ">=3.7.0"
 files = [
-    {file = "optimum-1.21.0-py3-none-any.whl", hash = "sha256:266fddab6ba8bcb999d3c40cbf73190a27bb23e5a64db3b8be4e74949a624ef3"},
-    {file = "optimum-1.21.0.tar.gz", hash = "sha256:6cf574226558d400154de1aa231d421e4236432d57c9ee5aa59342f95059b437"},
+    {file = "optimum-1.21.2-py3-none-any.whl", hash = "sha256:8b3633b9312413ceac5156294a2a0cd221268baf5a2c593f4d54ec20bff296d8"},
+    {file = "optimum-1.21.2.tar.gz", hash = "sha256:037e65d265237809fac69e9003215c60cf6de56e97c62ff7565abab4a94a64ce"},
 ]
 
 [package.dependencies]
@@ -1151,15 +1151,16 @@ exporters-gpu = ["onnx", "onnxruntime-gpu", "timm"]
 exporters-tf = ["h5py", "numpy (<1.24.0)", "onnx", "onnxruntime", "tensorflow (>=2.4,<=2.12.1)", "tf2onnx", "timm", "transformers[sentencepiece] (>=4.26.0,<4.38.0)"]
 furiosa = ["optimum-furiosa"]
 graphcore = ["optimum-graphcore"]
-habana = ["optimum-habana", "transformers (>=4.38.0,<4.39.0)"]
-intel = ["optimum-intel (>=1.16.0)"]
-neural-compressor = ["optimum-intel[neural-compressor] (>=1.16.0)"]
+habana = ["optimum-habana", "transformers (>=4.40.0,<4.41.0)"]
+intel = ["optimum-intel (>=1.18.0)"]
+ipex = ["optimum-intel[ipex] (>=1.18.0)"]
+neural-compressor = ["optimum-intel[neural-compressor] (>=1.18.0)"]
 neuron = ["optimum-neuron[neuron] (>=0.0.20)", "transformers (>=4.36.2,<4.42.0)"]
 neuronx = ["optimum-neuron[neuronx] (>=0.0.20)", "transformers (>=4.36.2,<4.42.0)"]
-nncf = ["optimum-intel[nncf] (>=1.16.0)"]
+nncf = ["optimum-intel[nncf] (>=1.18.0)"]
 onnxruntime = ["datasets (>=1.2.1)", "evaluate", "onnx", "onnxruntime (>=1.11.0)", "protobuf (>=3.20.1)"]
 onnxruntime-gpu = ["accelerate", "datasets (>=1.2.1)", "evaluate", "onnx", "onnxruntime-gpu (>=1.11.0)", "protobuf (>=3.20.1)"]
-openvino = ["optimum-intel[openvino] (>=1.16.0)"]
+openvino = ["optimum-intel[openvino] (>=1.18.0)"]
 quality = ["black (>=23.1,<24.0)", "ruff (==0.1.5)"]
 tests = ["Pillow", "accelerate", "diffusers (>=0.17.0)", "einops", "invisible-watermark", "parameterized", "pytest (<=8.0.0)", "pytest-xdist", "requests", "rjieba", "sacremoses", "scikit-learn", "timm", "torchaudio", "torchvision"]
 
@@ -2346,4 +2347,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "e19e36f6352bb81427ecc3a2fe6cb7da749f28e9a2df5fa5887f3d65c75dc446"
+content-hash = "6a0cf5b09308b25cf3f8e75dd7c5b5a7191212130812116a28ece174803fa6c6"
