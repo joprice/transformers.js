@@ -10,7 +10,7 @@ python = "^3.11"
 transformers = {version = "4.42.4", extras = ["torch"]}
 onnxruntime = "1.18.1"
 optimum = "1.21.2"
-onnx = "1.15.0"
+onnx = "1.16.1"
 onnxconverter-common = "1.14.0"
 tqdm = "^4.66.4"
 onnxslim = "0.1.31"
